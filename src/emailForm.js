@@ -3,7 +3,7 @@ import React from "react";
 
 const EmailForm = () => {
 return (
-   <form className='class="mt-8 space-y-6"' action="https://jamform.com/f/{formId}" method="POST">
+   <form className='class="mt-8 space-y-6"' action="https://jamform.com/f/PEBD4HJHAvR2ZQWrcNj7a" method="POST">
       <h2 class="mt-6 text-center text-2xl font-extrabold text-gray-900">
         Mantente Informado
       </h2>
