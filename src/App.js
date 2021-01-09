@@ -3,13 +3,12 @@ import './App.css';
 
 function App() {
   return (
+   <main>
     <header className=''>
       <div className=''><p>Logo placeholder</p></div>
     </header>
-    <main>
       <div></div>
     </main>
-    </header
   );
 }
 
