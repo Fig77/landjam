@@ -21,7 +21,7 @@ const EmailForm = () => {
     };
 
    if(trigger) {
-    if(chk.chkme(emailVar !== true) {
+    if(chk.checkme(emailVar) !== true) {
      toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', {
         position: "top-right",
         autoClose: 2000,
@@ -31,6 +31,10 @@ const EmailForm = () => {
         draggable: true,
         progress: undefined,
       })
+      setDisabled(false);
+      setTrigger(false);
+      setMailVar('');
+      return false;
     }
     emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
     .then(function(response) {
@@ -57,15 +61,14 @@ const EmailForm = () => {
         });
        console.log('FAILED...', error);
     });
-
     setTrigger(false);
    }
+   setMailVar('');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger]);
 
   const sendForm = (e) => {
     e.preventDefault();
-    setMailVar('');
     setDisabled(true);
     setTrigger(true);
   }
