@@ -1,10 +1,8 @@
 import logo from './assets/img/logo.png';
 import logo2 from './assets/img/logo2.png';
-import fb from './assets/img/fb.svg';
 import ig from './assets/img/ig.svg';
 import wp from './assets/img/wp.svg';
 import mainbg from './assets/img/mainbg.png';
-// import mainbg from './assets/img/mainbg2.jpg';
 import './App.css';
 import EmailForm from './emailForm';
 
@@ -25,8 +23,8 @@ function App() {
         <img src={logo2} alt="Logo main" className="logo-main phones-pt:mb-3 phones:mb-4 desktop: mb-4"/>
         <EmailForm />
         <div className="flex justify-center items-center">
-          <a target = "_blank" href="https://www.instagram.com/handyress/"><img src={ig} className="social-button"/></a>
-          <a target = "_blank" href="https://wa.me/5493482558491"><img src={wp} className="social-button"/></a>
+          <a target = "_blank"  rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} className="social-button"/></a>
+          <a target = "_blank" rel = "noreferrer" href="https://wa.me/5493482558491"><img src={wp} className="social-button"/></a>
         </div>
       </div>
      <footer className="black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">

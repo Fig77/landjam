@@ -44,7 +44,7 @@ const EmailForm = () => {
 
 
 return (
-   <form target="_blank" onSubmit = { (e) => sendForm(e) } className="mt-8 space-y-6">
+   <form target="_blank" rel="noreferrer"  onSubmit = { (e) => sendForm(e) } className="mt-8 space-y-6">
      <label for="email-address" class="sr-only">Email</label>
      <input  value = {  emailVar } onChange = { e => setVar(e) } id="email-address" name="email" type="email" required className="pt-4 px-6 py-4 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="E-mail" />
      <div className='pt-4 flex justify-center items-center'>
