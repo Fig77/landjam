@@ -1,5 +1,4 @@
 import logo from './assets/img/logo.png';
-import logo2 from './assets/img/logo2.png';
 import ig from './assets/img/ig.svg';
 import wp from './assets/img/wp.svg';
 import mainbg from './assets/img/mainbg.png';
@@ -12,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
    <main className="min-h-screen flex flex-col items-center justify-between items-center bg-gray-50" style={{background:`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${mainbg})`}}>
-   <header className="black-bar top-bar  w-full p-4 flex items-start  self-start">
+   <header className=" bgTransparent black-bar top-bar  w-full p-4 flex items-start  self-start">
     <img alt="logo header" src={logo} className="logo-nav"/>
    </header>
       <div className='flex flex-col justifiy-between items-center self-center text-center'>
@@ -23,7 +22,6 @@ function App() {
         <h3 className="text-white text-sm font-light tracking-ultra phones-pt:mb-3 phones:mb-4 desktop: text-base mb-4">
        <br/> enterate de las novedades de
         </h3>
-        <img alt="small local logo" src={logo2} className="logo-main phones-pt:mb-3 phones:mb-4 desktop: mb-4"/>
         <EmailForm />
         <div className="flex justify-center items-center">
           <a target = "_blank" rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} alt="instagram logo" className="social-button"/></a>

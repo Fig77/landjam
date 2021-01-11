@@ -33,6 +33,10 @@ main {
   border-color: #e1e1e1 !important;
 }
 
+.bgTransparent {
+  background: transparent !important;
+}
+
 .load:hover {
   border-color: #e1e1e1 !important;
   backgrounbd: #e1e1e1 !important;
@@ -45,7 +49,7 @@ main {
 
   /* Logo nav*/
   .logo-nav{
-    width:15%;
+    width:13%;
   }
 
   /* Logo main*/
@@ -60,9 +64,6 @@ main {
   }
 
   /* Top bar */
-  .top-bar{
-    background-color:#202020;
-  }
 
   /* Black bar */
   .black-bar{
