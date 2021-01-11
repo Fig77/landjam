@@ -76,11 +76,6 @@ main {
   }
 }
 
-/* hard fix to text size */
-
-
-@media (max-width: 450px) {
-}
 
 @media only screen and (max-width: 767px) {
   /* phones */
@@ -123,7 +118,7 @@ main {
     }
 
     .nont {
-     font-size: 20px !important;
+     font-size: 17px !important;
     }
   
     /* Logo main*/
