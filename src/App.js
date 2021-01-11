@@ -10,7 +10,7 @@ function App() {
   return (
    <main className="min-h-screen flex flex-col items-center justify-between items-center bg-gray-50" style={{background:`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${mainbg})`}}>
    <header className="black-bar top-bar  w-full p-4 flex items-start  self-start">
-    <img src={logo} alt="Logo" className="logo-nav"/>
+    <img alt="logo header" src={logo} alt="Logo" className="logo-nav"/>
    </header>
       <div className='flex flex-col justifiy-between items-center self-center text-center'>
         <h1 className="font-sans2 font-black text-white tracking-widest phones-pt:text-3xl mt-2 mb-6 px-1 phones: text-5xl mt-5 desktop: text-4xl">-PRÓXIMAMENTE-</h1>
@@ -20,10 +20,10 @@ function App() {
         <h3 className="text-white text-sm font-light tracking-ultra phones-pt:mb-3 phones:mb-4 desktop: text-base mb-4">
         Obtené descuentos exclusivos y <br/> enterate de las novedades de
         </h3>
-        <img src={logo2} alt="Logo main" className="logo-main phones-pt:mb-3 phones:mb-4 desktop: mb-4"/>
+        <img alt="logo small" src={logo2} alt="Logo main" className="logo-main phones-pt:mb-3 phones:mb-4 desktop: mb-4"/>
         <EmailForm />
         <div className="flex justify-center items-center">
-          <a target = "_blank"  rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} className="social-button"/></a>
+          <a target = "_blank" rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} className="social-button"/></a>
           <a target = "_blank" rel = "noreferrer" href="https://wa.me/5493482558491"><img src={wp} className="social-button"/></a>
         </div>
       </div>
