@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './index.css';
-
+import emailjs from 'emailjs-com'
 
 const EmailForm = () => {
 
@@ -12,21 +12,21 @@ const EmailForm = () => {
    setMailVar(e.target.value)
   }
 
-  async function subm(data) {
-    await fetch('https://jamform.com/f/PEBD4HJHAvR2ZQWrcNj7a', data).then((data) => console.log(data));
-    setDisabled(false);
-  }
+  const us = 'user_rncsCt2JscrCSvDpcHHQr';
 
   useEffect(() => {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: {emailVar}  })
+    const requestData = {
+      email_from: {emailVar}
     };
-
    if(trigger) {
+    emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
     setTrigger(false);
-    subm(requestOptions);
+    setDisabled(false);
    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger]);
