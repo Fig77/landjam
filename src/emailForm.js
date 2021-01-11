@@ -3,7 +3,6 @@ import './index.css';
 import emailjs from 'emailjs-com'
 import {toast} from 'react-toastify';
 
-
 const EmailForm = () => {
   const [emailVar, setMailVar] = useState('');
   const [disabled, setDisabled] = useState(false);
