@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const emChk = (() =>{
-  const dict = {  // this is for test purpose, clearly this isn't production
+  const dict = {  // test purpose, clearly this isn't production
     'gmail': 'gmail',
     'hotmail': 'hotmail',
     'outlook': 'outlook',
