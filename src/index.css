@@ -28,6 +28,18 @@ main {
   background-position: center top  !important;
 }
 
+.load{
+  background: #e1e1e1 !important;
+  border-color: #e1e1e1 !important;
+}
+
+.load:hover {
+  border-color: #e1e1e1 !important;
+  backgrounbd: #e1e1e1 !important;
+  cursor: wait !important;
+
+}
+
 @media only screen and (min-width: 768px) {
   /* tablets and desktop */
 
