@@ -78,6 +78,9 @@ main {
 /* hard fix to text size */
 
 
+@media (max-width: 450px) {
+}
+
 @media only screen and (max-width: 767px) {
   /* phones */
   /* Logo nav*/
@@ -112,6 +115,14 @@ main {
     /* Logo nav*/
     .logo-nav{
       width:150px;
+    }
+   
+    -title {
+     font-size: 25px !important;
+    }
+
+    .nont {
+     font-size: 20px !important;
     }
   
     /* Logo main*/
