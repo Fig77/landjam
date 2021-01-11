@@ -25,9 +25,8 @@ function App() {
         <img src={logo2} alt="Logo main" className="logo-main phones-pt:mb-3 phones:mb-4 desktop: mb-4"/>
         <EmailForm />
         <div className="flex justify-center items-center">
-          <a href="#"><img src={fb} className="social-button"/></a>
-          <a href="#"><img src={ig} className="social-button"/></a>
-          <a href="#"><img src={wp} className="social-button"/></a>
+          <a href="https://www.instagram.com/handyress/"><img src={ig} className="social-button"/></a>
+          <a href="https://wa.me/5493482558491"><img src={wp} className="social-button"/></a>
         </div>
       </div>
      <footer className="black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
