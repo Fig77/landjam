@@ -27,7 +27,7 @@ function App() {
           <a target = "_blank" rel = "noreferrer" href="https://wa.me/5493482558491"><img src={wp} alt="whatsapp logo" className="social-button"/></a>
         </div>
       </div>
-     <footer className="black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
+     <footer className="text-center black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
        <span>Copyright 	&copy; HandyRess. Todos los derechos reservados.</span>
      </footer>
     </main>
