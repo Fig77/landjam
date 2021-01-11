@@ -5,6 +5,9 @@ import wp from './assets/img/wp.svg';
 import mainbg from './assets/img/mainbg.png';
 import './App.css';
 import EmailForm from './emailForm';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
@@ -30,6 +33,17 @@ function App() {
      <footer className="text-center black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
        <span>Copyright 	&copy; HandyRess. Todos los derechos reservados.</span>
      </footer>
+     <ToastContainer
+      position="top-right"
+      autoClose={2000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
     </main>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './index.css';
 import emailjs from 'emailjs-com'
+import {toast} from 'react-toastify';
+
 
 const EmailForm = () => {
-
   const [emailVar, setMailVar] = useState('');
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
@@ -15,18 +16,38 @@ const EmailForm = () => {
   const us = 'user_rncsCt2JscrCSvDpcHHQr';
 
   useEffect(() => {
-    const requestData = {
-      email_from: {emailVar}
+    let requestData = {
+      email_from: `${emailVar}`,
     };
+
    if(trigger) {
     emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
     .then(function(response) {
+       setDisabled(false);
+       toast.success('Email registrado con exito', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+         });
        console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
+        toast.error('Los servidores estan de paro, intenta más tarde', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
        console.log('FAILED...', error);
     });
+
     setTrigger(false);
-    setDisabled(false);
    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger]);
