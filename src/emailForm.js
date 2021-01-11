@@ -8,16 +8,13 @@ const EmailForm = () => {
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
 
-  const clearMail = () => {
-    setMailVar('');
-  }
-
   const setVar = e => {
    setMailVar(e.target.value)
   }
 
   async function subm(data) {
     const answ = await  fetch('https://jamform.com/f/PEBD4HJHAvR2ZQWrcNj7a', data);
+    answ;
     setDisabled(false);
   }
 
@@ -33,6 +30,7 @@ const EmailForm = () => {
     setTrigger(false);
     subm(requestOptions);
    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trigger]);
 
   const sendForm = (e) => {
