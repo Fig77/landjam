@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './index.css';
 import emailjs from 'emailjs-com'
 import {toast} from 'react-toastify';
+import chk from './emChk';
 
 const EmailForm = () => {
   const [emailVar, setMailVar] = useState('');
@@ -20,6 +21,17 @@ const EmailForm = () => {
     };
 
    if(trigger) {
+    if(chk.chkme(emailVar !== true) {
+     toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      })
+    }
     emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
     .then(function(response) {
        setDisabled(false);
