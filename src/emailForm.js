@@ -13,8 +13,7 @@ const EmailForm = () => {
   }
 
   async function subm(data) {
-    const answ = await  fetch('https://jamform.com/f/PEBD4HJHAvR2ZQWrcNj7a', data);
-    answ;
+    await  fetch('https://jamform.com/f/PEBD4HJHAvR2ZQWrcNj7a', data);
     setDisabled(false);
   }
 
