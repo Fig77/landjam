@@ -27,7 +27,7 @@ function App() {
         <EmailForm />
         <div className="flex justify-center items-center">
           <a target = "_blank" rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} alt="instagram logo" className="social-button"/></a>
-          <a target = "_blank" rel = "noreferrer" href="https://wa.me/5493482558491"><img src={wp} alt="whatsapp logo" className="social-button"/></a>
+          <a target = "_blank" rel = "noreferrer" href="https://wa.me/543482558491"><img src={wp} alt="whatsapp logo" className="social-button"/></a>
         </div>
       </div>
      <footer className="text-center black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
