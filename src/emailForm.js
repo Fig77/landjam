@@ -17,7 +17,7 @@ const EmailForm = () => {
 
   useEffect(() => {
     let requestData = {
-      email_from: `${emailVar}`,
+      from_email: `${emailVar}`,
     };
 
    if(trigger) {
