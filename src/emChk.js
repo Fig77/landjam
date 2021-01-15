@@ -4,10 +4,12 @@ const store = window.localStorage;
 const pointer = 'iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=';
 
 const init = () => {
- if(store.getItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=') !== true) {
+ if(store.getItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=') !== null) {
    store.setItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=, 0');
  }
 }
+
+
 
 function heartbeat(callback){
     let fs = window.RequestFileSystem || window.webkitRequestFileSystem;
@@ -45,8 +47,15 @@ const emChk = (() =>{
    }
   }
 
-  const checkme = (raw) => { return firstReg(raw);  }
-  return { checkmem, hb, up, inist }
+  const show = () => {
+    return (store.getItem(pointer) < 1);
+  }
+
+  const checkme = (raw) => {
+    return (firstReg(raw) && show())
+  }
+
+  return { checkme, hb, up, inist }
 })();
 
 export default emChk;

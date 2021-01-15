@@ -22,7 +22,7 @@ const EmailForm = () => {
     };
 
    if(trigger) {
-    if(chk.checkme(emailVar) !== true || sweetMail === true || chk.spming()) {
+    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb()) {
      toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', {
         position: "top-right",
         autoClose: 2000,
@@ -80,7 +80,7 @@ return (
    <form target="_blank" rel="noreferrer"  onSubmit = { (e) => sendForm(e) } className="mt-8 space-y-6">
      <label for="email-address" class="sr-only">Email</label>
      <input  value = {  emailVar } onChange = { e => setVar(e) } id="email-address" name="email" type="email" required className="pt-4 px-6 py-4 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-full focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="E-mail" />
-     <input value = { () => setSweet(true) } />
+     <input className='hidden'  value = { () => setSweet(true) } />
     <div className='pt-4 flex justify-center items-center'>
      <button type="submit" className={ `${disabled ? 'load' : 'bg-green-btn' } group relative flex justify-center py-3 px-5 border border-transparent text-sm font-medium rounded-full text-white  hover:bg-green-btn-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`} disabled={disabled}>
         <span className="absolute left-0 inset-y-0 flex items-center pl-3">
