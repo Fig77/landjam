@@ -5,7 +5,7 @@ import {toast} from 'react-toastify';
 import chk from './emChk';
 
 const EmailForm = () => {
-  const [sweetMail, setSweet] = useState(false):
+  const [sweetMail, setSweet] = useState(false);
   const [emailVar, setMailVar] = useState('');
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
