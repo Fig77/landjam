@@ -21,6 +21,7 @@ const EmailForm = () => {
   useEffect(() => {
     let requestData = {
       from_email: `${emailVar}`,
+      warning: `{$superficialCheck}`,
     };
    if(superficialCheck < 3) {return false;}
    if(trigger) {
