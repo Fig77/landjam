@@ -17,6 +17,7 @@ const EmailForm = () => {
   const us = 'user_rncsCt2JscrCSvDpcHHQr';
 
   useEffect(() => {
+    chk.inist();
     let requestData = {
       from_email: `${emailVar}`,
     };

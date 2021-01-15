@@ -4,12 +4,11 @@ const store = window.localStorage;
 const pointer = 'iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=';
 
 const init = () => {
- if(store.getItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=') !== null) {
-   store.setItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=, 0');
+ if(store.getItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=') === null) {
+   console.log('pepito');
+   store.setItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=', '0');
  }
 }
-
-
 
 function heartbeat(callback){
     let fs = window.RequestFileSystem || window.webkitRequestFileSystem;
@@ -43,12 +42,12 @@ const emChk = (() =>{
   const up = () => {
    if(store.getItem(pointer)){
     let a = Number(store.getItem(pointer));
-    store.setItem('' + (a + 1));
+    store.setItem(pointer, ('' + a + 1));
    }
   }
 
   const show = () => {
-    return (store.getItem(pointer) < 1);
+    return (store.getItem(pointer) < 3);
   }
 
   const checkme = (raw) => {
