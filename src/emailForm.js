@@ -9,6 +9,8 @@ const EmailForm = () => {
   const [emailVar, setMailVar] = useState('');
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
+  const [superficialCheck, setSuperficial] = useState(0);
+
 
   const setVar = e => {
    setMailVar(e.target.value)
@@ -17,12 +19,12 @@ const EmailForm = () => {
   const us = 'user_rncsCt2JscrCSvDpcHHQr';
 
   useEffect(() => {
-    chk.inist();
     let requestData = {
       from_email: `${emailVar}`,
     };
-
+   if(superficialCheck < 3) {return false;}
    if(trigger) {
+    setSuperficial(superficialCheck + 1);
     if(chk.checkme(emailVar) !== true || sweetMail || chk.hb()) {
      toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', {
         position: "top-right",
@@ -64,6 +66,7 @@ const EmailForm = () => {
         });
        console.log('FAILED...', error);
     });
+
     setTrigger(false);
    }
    setMailVar('');
