@@ -4,13 +4,14 @@ import emailjs from 'emailjs-com'
 import {toast} from 'react-toastify';
 import chk from './emChk';
 
+// missing adding target to logging mail i.e developer
+
 const EmailForm = () => {
   const [sweetMail, setSweet] = useState(false);
   const [emailVar, setMailVar] = useState('');
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
   const [superficialCheck, setSuperficial] = useState(0);
-
 
   const setVar = e => {
    setMailVar(e.target.value)
