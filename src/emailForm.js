@@ -17,6 +17,13 @@ const EmailForm = () => {
    setMailVar(e.target.value)
   }
 
+  const resetState = () => {
+    setSweet(false);
+    setMailVar('');
+    setDisabled(false);
+    setTrigger(false);
+  }
+
   const us = 'user_rncsCt2JscrCSvDpcHHQr';
 
   useEffect(() => {
