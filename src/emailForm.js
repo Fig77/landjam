@@ -12,6 +12,15 @@ const EmailForm = () => {
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
   const [superficialCheck, setSuperficial] = useState(0);
+  const optionModal = {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+  }
 
   const setVar = e => {
    setMailVar(e.target.value)
@@ -31,51 +40,22 @@ const EmailForm = () => {
       from_email: `${emailVar}`,
       warning: `{$superficialCheck}`,
     };
-   if(superficialCheck < 3) {return false;}
    if(trigger) {
     setSuperficial(superficialCheck + 1);
-    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb()) {
-     toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-      })
-      setDisabled(false);
-      setTrigger(false);
-      setMailVar('');
+    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb() || superficialCheck >= 3) {
+     toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', optionModal)
+      resetState();
       return false;
     }
     chk.up();
     emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
     .then(function(response) {
        setDisabled(false);
-       toast.success('Email registrado con exito', {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-         });
-       console.log('SUCCESS!', response.status, response.text);
+       toast.success('Email registrado con exito', optionModal);
     }, function(error) {
-        toast.error('Los servidores estan de paro, intenta más tarde', {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-       console.log('FAILED...', error);
+       toast.error('Los servidores estan de paro, intenta más tarde', optionModal);
+       resetState();
     });
-
     setTrigger(false);
    }
    setMailVar('');
