@@ -41,10 +41,10 @@ const EmailForm = () => {
     };
    if(trigger) {
     setSuperficial(superficialCheck + 1);
-    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb() || superficialCheck >= 3) {
-     toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', optionModal)
-      resetState();
-      return false;
+    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb() || superficialCheck >= 4) {
+     toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', optionModal);
+     resetState();
+     return false;
     }
     chk.up();
     emailjs.send(service[0].service, service[0].template, requestData, service[0].user)

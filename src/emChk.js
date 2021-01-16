@@ -5,7 +5,6 @@ const pointer = 'iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=';
 
 const init = () => {
  if(store.getItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=') === null) {
-   console.log('pepito');
    store.setItem('iS7hShC8DMgjfiJ6du8XC60EcASX5kslAwwKNsgx3M8=', '0');
  }
 }
@@ -47,7 +46,7 @@ const emChk = (() =>{
   }
 
   const show = () => {
-    return (store.getItem(pointer) < 3);
+    return (store.getItem(pointer) <= 4);
   }
 
   const checkme = (raw) => {
