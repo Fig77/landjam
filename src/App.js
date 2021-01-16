@@ -1,7 +1,7 @@
-import logo from './assets/img/logo.png';
+import logo from './assets/img/logo.webp';
 import ig from './assets/img/ig.svg';
 import wp from './assets/img/wp.svg';
-import mainbg from './assets/img/mainbg.png';
+import mainbg from './assets/img/mainbg.webp';
 import './App.css';
 import EmailForm from './emailForm';
 import { ToastContainer } from 'react-toastify';
