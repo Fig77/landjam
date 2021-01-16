@@ -12,6 +12,7 @@ const EmailForm = () => {
   const [disabled, setDisabled] = useState(false);
   const [trigger, setTrigger] = useState(false);
   const [superficialCheck, setSuperficial] = useState(0);
+  const service = [{service:'service_d1rxmg4', template:'template_098thmp', user:'user_ce8Wucjfpups9ShGbIg7j'}, {service:'service_26gi747', template:'template_3dcz9oo', user:'user_rncsCt2JscrCSvDpcHHQr'}]
   const optionModal = {
     position: "top-right",
     autoClose: 2000,
@@ -33,8 +34,6 @@ const EmailForm = () => {
     setTrigger(false);
   }
 
-  const us = 'user_rncsCt2JscrCSvDpcHHQr';
-
   useEffect(() => {
     let requestData = {
       from_email: `${emailVar}`,
@@ -48,7 +47,7 @@ const EmailForm = () => {
       return false;
     }
     chk.up();
-    emailjs.send('service_26gi747', 'template_3dcz9oo', requestData, us)
+    emailjs.send(service[0].service, service[0].template, requestData, service[0].user)
     .then(function(response) {
        setDisabled(false);
        toast.success('Email registrado con exito', optionModal);
