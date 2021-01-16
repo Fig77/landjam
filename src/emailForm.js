@@ -38,7 +38,7 @@ const EmailForm = () => {
   useEffect(() => {
     let requestData = {
       from_email: `${emailVar}`,
-      warning: `{$superficialCheck}`,
+      warning: `${superficialCheck}`,
     };
    if(trigger) {
     setSuperficial(superficialCheck + 1);
