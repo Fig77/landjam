@@ -41,7 +41,7 @@ const EmailForm = () => {
     };
    if(trigger) {
     setSuperficial(superficialCheck + 1);
-    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb() || superficialCheck >= 4) {
+    if(chk.checkme(emailVar) !== true || sweetMail || chk.hb() || superficialCheck >= 7) {
      toast.error('Parece que hay un problema con el mail que ingresaste, contactanos via whatsapp para solucionarlo', optionModal);
      resetState();
      return false;

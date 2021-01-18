@@ -19,6 +19,10 @@ code {
     monospace;
 }
 
+.logo-nav {
+ min-width: 170px !important;
+}
+
 main {
   background-repeat: no-repeat !important;
   -webkit-background-size: cover  !important;
@@ -110,7 +114,7 @@ main {
   /* portrait phones */
     /* Logo nav*/
     .logo-nav{
-      width:150px;
+      width:175px;
     }
    
     -title {
