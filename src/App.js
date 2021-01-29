@@ -17,7 +17,7 @@ function App() {
       <div className='flex flex-col justifiy-between items-center self-center text-center'>
         <h1 className="title font-sans2 font-black text-white tracking-widest phones-pt:text-3xl mt-2 mb-6 px-1 phones: text-5xl mt-5 desktop: text-4xl">-PRÓXIMAMENTE-</h1>
         <div className="main-subtext">
-          <h2 className="px-2 h2text text-center nont font-sans text-white tracking-wider phones-pt:text-lg mb-2 phones: desktop: text-lg">HANDY TE INVITA A DISFRUTAR UNA OPCIÓN MÁS SENCILLA PARA ELEGIR EL MOMENTO Y LUGAR DÓNDE SALIR CON AMIGOS</h2>
+          <h2 className="px-2 h2text text-center nont font-sans text-white tracking-wider phones-pt:text-lg mb-2 phones: desktop: text-lg">HANDYRESS TE INVITA A DISFRUTAR UNA OPCIÓN MÁS SENCILLA PARA ELEGIR EL MOMENTO Y LUGAR DÓNDE SALIR CON AMIGOS</h2>
         </div>
         <h3 className="text-white text-sm font-light tracking-ultra phones-pt:mb-3 phones:mb-4 desktop: text-base mb-4">
        <br/> Si sos propietario de un local, <br/> contactanos para conocer nuestros servicios.
