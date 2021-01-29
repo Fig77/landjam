@@ -12,7 +12,7 @@ function App() {
   return (
    <main className="min-h-screen flex flex-col items-center justify-between items-center bg-gray-50" style={{background:`linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${mainbg})`}}>
    <header className=" bgTransparent black-bar top-bar  w-full p-4 flex items-start  self-start">
-    <img alt="HandyRess logo de empresa" src={logo} title='HandyRess reservas' className="logo-nav"/>
+    <img alt="logo de empresa" src={logo} title='HandyRess logo' className="logo-nav"/>
    </header>
       <div className='flex flex-col justifiy-between items-center self-center text-center'>
         <h1 className="title font-sans2 font-black text-white tracking-widest phones-pt:text-3xl mt-2 mb-6 px-1 phones: text-5xl mt-5 desktop: text-4xl">-PRÓXIMAMENTE-</h1>
@@ -24,8 +24,8 @@ function App() {
         </h3>
         <EmailForm />
         <div className="flex justify-center items-center">
-          <a target = "_blank" rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} alt="Instagram HandyRess, contacto" className="social-button"/></a>
-          <a target = "_blank" rel = "noreferrer" href="https://wa.me/543482558491"><img src={wp} alt="Whatsapp HandyRess, contacto" className="social-button"/></a>
+          <a target = "_blank" rel="noreferrer"  href="https://www.instagram.com/handyress/"><img src={ig} alt="Instagram contacto link" className="social-button"/></a>
+          <a target = "_blank" rel = "noreferrer" href="https://wa.me/543482558491"><img src={wp} alt="Whatsapp contacto link" className="social-button"/></a>
         </div>
       </div>
      <footer className="text-center black-bar w-full px-2 pt-2 pb-2 flex justify-center items-center text-white mb-1">
